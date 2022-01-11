@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <h1>air company</h1>
+</header>
+<section>
+    <div>
+        <p th:text="${airCompany.getName()}">name</p>
+        <p th:text="${airCompany.getID()}">id</p>
+        <p th:text="${airCompany.getCompanyType()}">type</p>
+        <p th:text="${airCompany.getFoundedAt()}">founded at</p>
+    </div>
+    <a th:href="@{/airport/edit-air-company/{id}(id=${airCompany.getID()})}">Edit data</a>
+</section>
+<section>
+    <form th:method="DELETE" th:action="@{/airport/delete-air-company/{id}(id=${airCompany.getID()})}">
+        <input type="submit" value="Delete">
+    </form>
+</section>
+</body>
+</html>

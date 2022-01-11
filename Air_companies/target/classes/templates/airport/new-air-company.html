@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <h1>New air Company</h1>
+</header>
+<section>
+    <form th:method="POST" th:action="@{/airport/new-air-company}" th:object="${airCompany}">
+        <label for="name">Name</label>
+        <input type="text" id="name" th:field="*{name}" minlength="2">
+        <br>
+        <label for="companyType">companyType</label>
+        <input type="text" id="companyType" th:field="*{companyType}" minlength="2">
+        <br>
+        <label for="foundedAt">Founded At</label>
+        <input type="date" id="foundedAt" th:field="*{foundedAt}">
+        <br>
+        <button type="submit">create</button>
+    </form>
+</section>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello world</h1>
+<section>
+    <div th:each="flight : ${flights}">
+        <p th:text="${flight.getID()}"></p>
+    </div>
+</section>
+</body>
+</html>

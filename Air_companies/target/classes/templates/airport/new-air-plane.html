@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>new air plane</h1>
+<section>
+    <form th:method="POST" th:action="@{/airport/new-air-plane}" th:object="${airPlane}">
+        <label for="name">Name</label>
+        <input type="text" id="name" th:field="*{name}" minlength="2">
+        <br>
+        <label for="factorySerialNumber">factorySerialNumber</label>
+        <input type="text" id="factorySerialNumber" th:field="*{factorySerialNumber}" minlength="2">
+        <br>
+        <label for="airCompanyId">airCompanyId</label>
+        <input type="text" id="airCompanyId" th:field="*{airCompanyId}" >
+        <br>
+        <label for="numberOfFlights">numberOfFlights</label>
+        <input type="number" id="numberOfFlights" th:field="*{numberOfFlights}" >
+        <br>
+        <label for="flightDistance">flightDistance</label>
+        <input type="number" id="flightDistance" th:field="*{flightDistance}" minlength="2">
+        <br>
+        <label for="fuelCapacity">fuelCapacity</label>
+        <input type="number" id="fuelCapacity" th:field="*{fuelCapacity}" minlength="2">
+        <br>
+        <label for="type">type</label>
+        <input type="text" id="type" th:field="*{type}" >
+        <br>
+        <label for="createdAt">createdAt</label>
+        <input type="date" id="createdAt" th:field="*{createdAt}" >
+        <br>
+        <button type="submit">Created</button>
+    </form>
+</section>
+</body>
+</html>
