@@ -27,4 +27,4 @@ n==4 це очікує
   n==3 це зариманий
   n==4 це очікує
 
-  find-all-flights-in-completed-and-different-between-time але вивод на html сторінку не зробив  не хотів вже шукати як бо було пізно, хотів спати
+  find-all-flights-in-completed-and-different-between-time ще не завершив 
